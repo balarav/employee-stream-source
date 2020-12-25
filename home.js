@@ -13,8 +13,9 @@ const employeeList = [{
     firstname: "bala", lastname: "ravi"
 }];
 
-app.get('/employees', (a, b) => {
-    b.send(employeeList)
+
+app.get("/employees", (req, res) =>{
+    res.json(employeeList)
 });
 
 app.listen(3000, () =>{
