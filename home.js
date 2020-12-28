@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express();
 
-app.get('/', (req, res) =>{
+app.get('/index', (req, res) => {
     res.send("Welcome to landing page of Employee API")
 });
 
@@ -13,11 +13,10 @@ const employeeList = [{
     firstname: "bala", lastname: "ravi"
 }];
 
-
-app.get("/employees", (req, res) =>{
+app.get("/employees", (req, res) => {
     res.json(employeeList)
 });
 
-app.listen(3000, () =>{
+app.listen(3000, () => {
     console.log("server started at port 3000")
-})
+});
