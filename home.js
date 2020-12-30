@@ -8,13 +8,21 @@ app.get('/index', (req, res) => {
 
 // mock for database.
 const employeeList = [{
-    firstname: "balaji", lastname: "ravichandran"
+    firstname: "balaji", lastname: "ravichandran", id: 1
 }, {
-    firstname: "bala", lastname: "ravi"
+    firstname: "bala", lastname: "ravi", id:2
 }];
 
 app.get("/employees", (req, res) => {
     res.json(employeeList)
+});
+
+app.get('/employee/:id1/:id2', (req, res) => {
+    var selectedId = req.params.id1;
+    console.log(req.params.id1);
+    const selectedEmployee = employeeList.find(r=>r.id == selectedId);
+    console.log(req.params.id2);
+  res.json(selectedEmployee);  
 });
 
 app.listen(3000, () => {

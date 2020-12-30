@@ -21,9 +21,8 @@
 * [x] what happens when we send a plain string in res.json ()
 
 ### Day 3
+ 
+* [x] Pass query params to our get method
+* [x] create an api method to accept employee id and return the selected employee.
 
-* [ ] how to pass query params to a node function
-* [ ] read params from URL
-* [ ] read params from the query string URL
-* [ ] write an http post method
-
+Thanks.......
