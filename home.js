@@ -1,6 +1,8 @@
 const express = require('express')
 
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 app.get('/index', (req, res) => {
     res.send("Welcome to landing page of Employee API")
@@ -15,6 +17,12 @@ const employeeList = [{
 
 app.get("/employees", (req, res) => {
     res.json(employeeList)
+});
+
+app.post("/employee", (req, res) =>{
+    const bodyVal = req.body;
+    employeeList.push(bodyVal);
+    res.send("Employee added to database successfully");
 });
 
 app.get('/employee/:id1/:id2', (req, res) => {

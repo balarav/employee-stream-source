@@ -25,4 +25,6 @@
 * [x] Pass query params to our get method
 * [x] create an api method to accept employee id and return the selected employee.
 
-Thanks.......
+### Day 4
+
+* [x] create an api method that accepts request body. (HTTPPOST method)
